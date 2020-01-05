@@ -3,8 +3,8 @@ import requests
 import json 
 from fractions import Fraction 
 
-n1 = [2,11.2,21/7,4/4,11.75]
-n2 = [7,21.7,11/21,7/11,21.1]
+n1 = [2,215,8]
+n2 = [7,11,3,4]
 
 division_script = []
 division_test= []
