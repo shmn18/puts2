@@ -1,3 +1,4 @@
+@app.route('/mul', methods=['GET','POST'])
 def multiplication():
     value1=request.args.get('A',default = 0, type = Fraction)
     value2=request.args.get('A',default = 0, type = Fraction)
