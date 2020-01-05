@@ -1,3 +1,4 @@
+@app.route('/div', methods=['GET','POST'])
 def division():
     value1=request.args.get('A',default = 0, type = Fraction)
     value2=request.args.get('A',default = 0, type = Fraction)
