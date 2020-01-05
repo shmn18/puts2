@@ -36,36 +36,36 @@ for i in range(0,len(n1)):
         addition_script.append(round(data1,3))
 
         url_b = 'http://127.0.0.1:5000/sub'
-        r2 = requests.get(url_a, params=parameters)
+        r2 = requests.get(url_b, params=parameters)
         data2 = r2.json()
         subtraction_script.append(round(data2,3))
 
         url_m = 'http://127.0.0.1:5000/mul'
-        r3 = requests.get(url_a, params=parameters)
+        r3 = requests.get(url_m, params=parameters)
         data3 = r3.json()
         multiplication_script.append(round(data3,3))
 
         url_d = 'http://127.0.0.1:5000/div'
-        r4 = requests.get(url_a, params=parameters)
+        r4 = requests.get(url_d, params=parameters)
         data4 = r4.json()
         division_script.append(round(data4,3))
 
         if addition_script[i] == addition_test[i]:
-                print"addition successfull:OK"
+                print("addition successfull:OK")
         else:
-                print"addition failed"
+                print("addition failed")
         
         if subtraction_script[i] == subtraction_test[i]:
-                print"subtraction successfull:OK"
+                print("subtraction successfull:OK")
         else:
-                print"subtraction failed"
+                print("subtraction failed")
 
         if multiplication_script[i] == multiplication_test[i]:
-                print"multiplication successfull:OK"
+                print("multiplication successfull:OK")
         else:
-                print"multiplication failed"
+                print("multiplication failed")
 
         if division_script[i] == division_test[i]:
-                print"division successfull:OK"
+                print("division successfull:OK")
         else:
-                print"division failed"
+                print("division failed")
