@@ -1,3 +1,4 @@
+@app.route('/sub', methods=['GET','POST'])
 def subtraction():
     value1=request.args.get('A',default = 0, type = Fraction)
     value2=request.args.get('A',default = 0, type = Fraction)
