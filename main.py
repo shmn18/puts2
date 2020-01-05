@@ -11,7 +11,7 @@ def index():
 @app.route('/add', methods=['GET','POST'])
 def addition():
     value1=request.args.get('A',default = 0, type = Fraction)
-    value2=request.args.get('A',default = 0, type = Fraction)
+    value2=request.args.get('B',default = 0, type = Fraction)
     result=value1+value2
     x=str(result).split('/')
     if len(x) == 2:
@@ -26,9 +26,10 @@ def addition():
         n=str(result).split(".")
         return " %s \n" % n[0]
 
+@app.route('/sub', methods=['GET','POST'])
 def subtraction():
     value1=request.args.get('A',default = 0, type = Fraction)
-    value2=request.args.get('A',default = 0, type = Fraction)
+    value2=request.args.get('B',default = 0, type = Fraction)
     result=value1-value2
     x=str(result).split('/')
     if len(x) == 2:
@@ -43,9 +44,10 @@ def subtraction():
         n=str(result).split(".")
         return " %s \n" % n[0]
 
+@app.route('/mul', methods=['GET','POST'])
 def multiplication():
     value1=request.args.get('A',default = 0, type = Fraction)
-    value2=request.args.get('A',default = 0, type = Fraction)
+    value2=request.args.get('B',default = 0, type = Fraction)
     result=value1*value2
     x=str(result).split('/')
     if len(x) == 2:
@@ -60,9 +62,10 @@ def multiplication():
         n=str(result).split(".")
         return " %s \n" % n[0]
 
+@app.route('/div', methods=['GET','POST'])
 def division():
     value1=request.args.get('A',default = 0, type = Fraction)
-    value2=request.args.get('A',default = 0, type = Fraction)
+    value2=request.args.get('B',default = 0, type = Fraction)
     result=value1/value2
     x=str(result).split('/')
     if len(x) == 2:
@@ -79,3 +82,5 @@ def division():
 
 if __name__ == '__main__':
     app.run(debug=True)
+
+
