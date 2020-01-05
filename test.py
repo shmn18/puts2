@@ -16,7 +16,7 @@ for i in range(0,len(n1)):
         division_test.append(round(test_d,3))
         
         url_d = 'http://127.0.0.1:5000/div'
-        r4 = requests.get(url_a, params=parameters)
+        r4 = requests.get(url_d, params=parameters)
         data4 = r4.json()
         division_script.append(round(data4,3))
         
