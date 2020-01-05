@@ -3,8 +3,8 @@ import requests
 import json 
 from fractions import Fraction 
 
-n1 = [2,11.2,21/7,4/4,11.75]
-n2 = [7,21.7,11/21,7/11,21.1]
+n1 = [2,21,5,8]
+n2 = [7,11,3,4]
 
 subtraction_script = []
 subtraction_test = []
@@ -16,7 +16,7 @@ for i in range(0,len(n1)):
         subtraction_test.append(round(test_s,3))
         
         url_b = 'http://127.0.0.1:5000/sub'
-        r2 = requests.get(url_a, params=parameters)
+        r2 = requests.get(url_b, params=parameters)
         data2 = r2.json()
         subtraction_script.append(round(data2,3))
         
